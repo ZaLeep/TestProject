@@ -1,0 +1,15 @@
+﻿@{
+    Layout = "_Layout";
+}
+<div class="wrapper">
+    <div class="content">
+        <form method="post">
+            <label for="msg-box">Enter your message</label>
+            <textarea class="text" type="text" id="msg-box" name="msg"></textarea>
+            <div class="buttons">
+                <input type="submit" value="Send" formaction="/Home/Send" />
+                <div id="a"><a href="/MessagesPage">Messages</a></div>
+            </div>
+        </form>
+    </div>
+</div>

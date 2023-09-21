@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "_Layout";
+}
+@model List<KeyValuePair<string, string>>
+<div class="wrapper">
+    <div class="msgs">
+        <div class="content-msg">
+            <h3>Your messages</h3>
+            <div class="msgs-cont">
+                @for(int i = 1; i < ViewBag.ownMessages.Count + 1; i++)
+                {
+                    <div id="msg">
+                        <p>@i) @ViewBag.ownMessages[ViewBag.ownMessages.Count - i]</p>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="content-msg">
+            <h3>All messages</h3>
+            <div class="msgs-cont">
+                @for(int i = 1; i < Model.Count + 1; i++)
+                {
+                    <div id="msg">
+                        <p>@i) @Model[Model.Count - i].Key:</p>
+                        <p> @Model[Model.Count - i].Value</p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
